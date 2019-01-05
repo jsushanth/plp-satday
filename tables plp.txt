@@ -1,0 +1,35 @@
+CREATE TABLE customers
+  2  ( customerName varchar2(20) not null,
+  3    agentId varchar2(20) not null,
+  4    policy_BusinessSegment varchar2(50) not null);
+
+Table created.
+
+
+CREATE TABLE agent
+  2  ( agentId varchar2(20) not null,
+  3    agentName varchar2(50) not null,
+  4    numofCustomers number(5),
+  5    CONSTRAINT agent_pk PRIMARY KEY (agentId )
+  6  );
+
+
+SQL> select * from agent;
+
+AGENTID              AGENTNAME                                          NUMOFCUSTOMERS
+-------------------- -------------------------------------------------- --------------
+101                  ramcharan                                                       2
+102                  ram                                                             3
+
+
+
+
+
+
+
+select * from customers;
+
+CUSTOMERNAME         AGENTID              POLICY_BUSINESSSEGMENT
+-------------------- -------------------- --------------------------------------------------
+sushanth             101                  auto
+ramcharan            102                  cycle
